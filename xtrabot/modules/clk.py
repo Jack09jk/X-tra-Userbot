@@ -12,8 +12,8 @@ async def enaclk(event):
         person = await m.get_sender()
         user=person.first_name
         rantext = ''.join(random.choice(string.ascii_lowercase + string.digits) for _ in range(7))
-        api_token = '0889ecd7591125746f2e99994815bb5d0641543a'
-        req = requests.get('https://ptlinks.in/api?api={}&url={}&alias={}'.format(api_token, m.text, rantext)).json()
+        api_token = '9f84b24d4dbda70097d055e17d527e9ad6665840'
+        req = requests.get('https://gp-links.in/api?api={}&url={}&alias={}'.format(api_token, m.text, rantext)).json()
         if(req["status"] == 'error'):
           smsg = req["message"]
         else:
