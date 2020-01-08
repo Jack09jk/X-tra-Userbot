@@ -13,7 +13,7 @@ async def enaclk(event):
         user=person.first_name
         rantext = ''.join(random.choice(string.ascii_lowercase + string.digits) for _ in range(7))
         api_token = '0889ecd7591125746f2e99994815bb5d0641543a'
-        req = requests.get('https://ptlinks.inapi?api={}&url={}&alias={}'.format(api_token, m.text, rantext)).json()
+        req = requests.get('https://ptlinks.in/api?api={}&url={}&alias={}'.format(api_token, m.text, rantext)).json()
         if(req["status"] == 'error'):
           smsg = req["message"]
         else:
